@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        img {
+            height: 300px;
+            width: 300px;
+        }
+
+        .container {
+
+            text-align: center;
+            font-size: 20px;
+            color: red;
+            border: radius 15px;
+            background-color: rgb(32, 190, 233);
+            margin: 50px auto;
+            text-align: left;
+            width: 300px;
+            height: 500px;
+
+        }
+
+        strong {
+            text-align: center;
+            font-size: 30px;
+            color: red;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.min.js"> </script>
+    <title>Lab7-bai1</title>
+</head>
+
+<body ng-app="b1">
+    <div class="container" ng-controller="hienthi">
+        <div class="caption">
+            <strong>
+                <h4>Thông tin sinh viên</h4>
+            </strong>
+            <img src="anh/images.jfif" alt="">
+
+        </div>
+        <ul>
+            <li><span>Họ tên:</span>Nguyễn Tấn Tài/li>
+            <li><span>Ngày sinh:</span>16/03/2003</li>
+            <li><span>Giới tính:</span>Nam</li>
+            <li><span>Điểm:</span>10.0</li>
+        </ul>
+    </div>
+</body>
+<script>
+    app = angular.module("b1", []);
+    app.controller("hienthi", xuly);
+    function xuly($scope) {
+        $scope.hoten = "Nguyễn Tấn Tài";
+        $scope.ngaysinh = "16/03/2003";
+        $scope.gender = "Nam";
+        $scope.photo = "images.jfif";
+        $scope.mark = 10.0;
+    }
+</script>
+
+</html>
